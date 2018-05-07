@@ -1,3 +1,5 @@
+//Benjamin McBrayer, 5.6.2018
+
 package com.circle.gc;
 
 public class Circle {

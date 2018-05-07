@@ -9,9 +9,10 @@ public class CircleApp {
 	public static void main(String[] args) {
 		Scanner scnr = new Scanner(System.in);
 		double radius = 0;
+		int numCircles = 0;
 		String playAgain;
 		
-		System.out.println("Welcome to the Grand Circus Circle Tester!");
+		System.out.println("Welcome to the Grand Circus Circle Generator!");
 		
 		do {
 			//Prompt the user to enter a radius.
@@ -26,11 +27,21 @@ public class CircleApp {
 			//Display area.
 			System.out.println(c.getFormattedArea());
 			
+			//FIXME: Create a method that counts the number of circles the user generates.
+			++numCircles;
+			
 			//Prompt user to continue.
 			playAgain = Validator.getString(scnr, "Continue? (y/n)");
 			
 		} while (playAgain.equalsIgnoreCase("y"));
 
+		
+		//FIXME: Also indicate the number of circles the user generated.
+		if (numCircles == 1 ) {
+			System.out.println("You have generated " + numCircles + " circle.");
+		} else { 
+			System.out.println("You have generated " + numCircles + " circles.");
+		}
 		System.out.println("Goodbye.");
 		
 		scnr.close();
