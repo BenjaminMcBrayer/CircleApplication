@@ -27,7 +27,6 @@ public class CircleApp {
 			//Display area.
 			System.out.println(c.getFormattedArea());
 			
-			//FIXME: Create a method that counts the number of circles the user generates.
 			++numCircles;
 			
 			//Prompt user to continue.
@@ -36,7 +35,6 @@ public class CircleApp {
 		} while (playAgain.equalsIgnoreCase("y"));
 
 		
-		//FIXME: Also indicate the number of circles the user generated.
 		if (numCircles == 1 ) {
 			System.out.println("You have generated " + numCircles + " circle.");
 		} else { 
