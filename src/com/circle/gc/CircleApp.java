@@ -2,6 +2,7 @@
 //This Java console program calculates a circle's circumference and area.
 
 package com.circle.gc;
+
 import java.util.Scanner;
 
 public class CircleApp {
@@ -11,37 +12,36 @@ public class CircleApp {
 		double radius = 0;
 		int numCircles = 0;
 		String playAgain;
-		
+
 		System.out.println("Welcome to the Grand Circus Circle Generator!");
-		
+
 		do {
-			//Prompt the user to enter a radius.
+			// Prompt the user to enter a radius.
 			radius = Validator.getDouble(scnr, "Please enter the radius: ", 0, Double.MAX_VALUE);
-			
+
 			// Create a Circle object.
 			Circle c = new Circle(radius);
-			
-			//Display circumference.
+
+			// Display circumference.
 			System.out.println(c.getFormattedCircumference());
-			
-			//Display area.
+
+			// Display area.
 			System.out.println(c.getFormattedArea());
-			
+
 			++numCircles;
-			
-			//Prompt user to continue.
+
+			// Prompt user to continue.
 			playAgain = Validator.getString(scnr, "Continue? (y/n)");
-			
+
 		} while (playAgain.equalsIgnoreCase("y"));
 
-		
-		if (numCircles == 1 ) {
+		if (numCircles == 1) {
 			System.out.println("You have generated " + numCircles + " circle.");
-		} else { 
+		} else {
 			System.out.println("You have generated " + numCircles + " circles.");
 		}
 		System.out.println("Goodbye.");
-		
+
 		scnr.close();
 	}
 
